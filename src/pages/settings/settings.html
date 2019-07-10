@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ 'SETTINGS.SETTINGS' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="page-spaces" ion-fixed>
+    <span class="section-text">{{ 'SETTINGS.ACCOUNT' | translate }}</span>
+    <button ion-button color="primary" full round icon-left (click)="goMyAccountPage()" margin-top>
+      <i class="fas fa-user-circle text-icon"></i>
+      {{ 'SETTINGS.MY_ACCOUNT' | translate }}
+    </button>
+    <button ion-button color="warningRed" full round (click)="logout()" margin-top>
+      {{ 'SETTINGS.LOG_OUT' | translate }}
+    </button>
+  </div>
+</ion-content>

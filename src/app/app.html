@@ -1,0 +1,22 @@
+<ion-menu [content]="content" id="mainMenu">
+  <ion-header color="primary">
+    <ion-navbar color="primary">
+      <img class="center-logo" [src]="themeService.navbarLogoUrl" [ngClass]="{'center-logo-ios': isIOS() }">
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <button ion-item menuClose *ngFor="let p of appPages" (click)="goPage(p)" [ngClass]="{'menu-item-highlight': isCurrentPage(p) }">
+      <h2>{{ p.title | translate }}</h2>
+    </button>
+  </ion-content>
+  <ion-footer no-border>
+    <ion-item>
+      <ion-label>
+        <h2>{{ accountName }}</h2>
+        <p>{{ appVer }}</p>
+      </ion-label>
+    </ion-item>
+    <extra-page-space></extra-page-space>
+  </ion-footer>
+</ion-menu>
+<ion-content #content><page-nav swipeBackEnabled="false"></page-nav></ion-content>
