@@ -36,7 +36,7 @@
       <button ion-button color="primary" class="full-button" full round (click)="nativeSettings.open('wifi')" margin-vertical>
         {{ 'DEVICE_CREATE.GO_TO_SETTINGS' | translate }}
       </button>
-      <p align="center" [innerHTML]="'DEVICE_CREATE.AFTER_SETTINGS' | translate: { productName: (appName | async) }"></p>
+      <p align="center" [innerHTML]="'DEVICE_CREATE.AFTER_SETTINGS' | translate: { productName: '一番扭蛋機' }"></p>
     </div>
     <div>
       <button ion-button color="primary" class="bottom-button full-button" [disabled]="!canContinue || !canCapsuleMode"  (click)="onCapsuleMode()" full>{{ 'DEVICE_CREATE.CAPSULE_MODE' | translate }}</button>

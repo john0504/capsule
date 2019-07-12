@@ -76,7 +76,7 @@ export const appConfig: AppConfig = {
     theme: {
       primaryColor: '#00baff',
       productName: '一番扭蛋機',
-      wifiName: 'tenx-XXXX',
+      wifiName: 'cect-XXXX',
     },
     amazonAlexa: {
       skillName: 'skill-name',
