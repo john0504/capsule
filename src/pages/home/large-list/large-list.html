@@ -15,9 +15,7 @@
 </ion-header>
 <ion-content>
   <ng-container ion-fixed>
-    <div *ngIf="!ready; else showDevices" class="empty" padding>
-      <ion-spinner color="primary"></ion-spinner>
-    </div>
+    <empty-devices *ngIf="!ready; else showDevices" empty-status></empty-devices>
     <ng-template #showDevices>
       <scrollable-tabs [tabs]="tabs" [selectedTabIndex]="currentTab" (tabSelected)="tabSelected($event)" *ngIf="groupsList && groupsList.length > 0"></scrollable-tabs>
       <div class="main-content">
